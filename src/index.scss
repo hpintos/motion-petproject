@@ -1,0 +1,32 @@
+// Settings
+//
+
+// Inherit from original theme
+@import '~@s-ui/theme/lib/index';
+@import '~@adv-ui/adv-theme/lib/index';
+
+// Load font
+@import url('https://fonts.googleapis.com/css?family=Roboto:#{$fw-light},#{$fw-regular},#{$fw-regular}i,#{$fw-semi-bold},#{$fw-bold},#{$fw-bold}i');
+
+$bgc-body: $c-white !default;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $bgc-body;
+  color: $c-text-base;
+  font-family: $ff-sans-serif;
+  // font-feature-settings: 'ss02';
+  font-size: $fz-body;
+  line-height: $lh-m;
+  margin: 0;
+  padding: 0;
+}

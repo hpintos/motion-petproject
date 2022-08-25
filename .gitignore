@@ -1,0 +1,39 @@
+# OS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea
+
+# env
+.tmp
+logs
+*.log
+
+# pact
+contract/documents
+contract/logs
+
+# coverage
+coverage
+
+# language
+lib
+node_modules
+npm-debug.log
+package-lock.json
+
+# server
+public
+public-coches
+public-motos
+server
+server*.zip
+statics/favicon.ico
+stats.json
+umd
+
+# web-app
+critical-css/coches
+critical-css/motos
+dist

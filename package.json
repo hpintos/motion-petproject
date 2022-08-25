@@ -1,0 +1,39 @@
+{
+  "name": "motion-petproject",
+  "version": "1.0.0",
+  "description": "This is a pet project to test the react-spring library",
+  "main": "index.js",
+  "scripts": {
+    "co": "sui-mono commit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sui-bundler dev",
+    "ssr": "sui-bundler build -C && sui-ssr build -C && node server/index.js --inspect `pbpaste`"
+  },
+  "author": "Hernan Pintos",
+  "license": "ISC",
+  "dependencies": {
+    "@adv-ui/adv-theme": "0",
+    "@adv-ui/mt-theme": "5",
+    "@s-ui/component-peer-dependencies": "1",
+    "@s-ui/hoc": "1",
+    "@s-ui/i18n": "1",
+    "@s-ui/react-initial-props": "2",
+    "@s-ui/react-router": "1",
+    "react-spring": "9"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@s-ui/lint/eslintrc.js"
+    ]
+  },
+  "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
+  "stylelint": {
+    "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "devDependencies": {
+    "@s-ui/bundler": "9",
+    "@s-ui/lint": "4",
+    "@s-ui/mono": "2",
+    "@s-ui/ssr": "8"
+  }
+}
