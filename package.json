@@ -2,7 +2,6 @@
   "name": "motion-petproject",
   "version": "1.0.0",
   "description": "This is a pet project to test the react-spring library",
-  "main": "index.js",
   "scripts": {
     "co": "sui-mono commit",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -34,6 +33,7 @@
     "@s-ui/bundler": "9",
     "@s-ui/lint": "4",
     "@s-ui/mono": "2",
-    "@s-ui/ssr": "8"
+    "@s-ui/ssr": "8",
+    "webpack-cli": "^4.10.0"
   }
 }
