@@ -13,3 +13,48 @@ jobs:
         uses: styfle/cancel-workflow-action@0.6.0
         with:
           access_token: ${{ github.token }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+          registry-url: 'https://registry.npmjs.org'
+      - name: Build dependencies
+        run: |
+          npm i
+          npm run build
+      - name: Compress public directory
+        run: tar -zcvf public-dir.tar.gz ./public/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: public-folder
+          path: public-dir.tar.gz
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+          registry-url: 'https://registry.npmjs.org'
+      - uses: actions/download-artifact@v2
+        with:
+          name: public-folder
+          path: .
+      - name: Uncompress public directory
+        run: |
+          tar -zxvf ./public-dir.tar.gz
+          rm ./public-dir.tar.gz
+      - name: Deploy
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.ACCOUNT_ID }}
+          projectName: motion-project
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -6,7 +6,11 @@
     "co": "sui-mono commit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sui-bundler dev",
-    "ssr": "sui-bundler build -C && sui-ssr build -C && node server/index.js --inspect `pbpaste`"
+    "server": "npx webpack serve --open --port 8080",
+    "dev:ssr": "npm run build && sudo PORT=3030 node server/index.js --inspect",
+    "build": "npm run build:static && npm run build:ssr",
+    "build:ssr": "sui-ssr build -C",
+    "build:static": "sui-bundler build -C"
   },
   "author": "Hernan Pintos",
   "license": "ISC",
