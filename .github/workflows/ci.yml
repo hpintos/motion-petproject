@@ -62,6 +62,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.ACCOUNT_ID }}
-          projectName: motion-project
+          projectName: motion-petproject
           directory: .
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
