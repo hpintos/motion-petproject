@@ -24,6 +24,10 @@ jobs:
         with:
           node-version: 16.15.0
           registry-url: 'https://registry.npmjs.org'
+      - name: Use NPM Token with organization read access
+        uses: dkershner6/use-npm-token-action@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
       - name: Build dependencies
         run: |
           npm i
