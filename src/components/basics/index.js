@@ -15,9 +15,9 @@ const Basic = () => {
         catálogo a futuro si fuera necesario.
       </p>
       <div className="basicTransitionsContainer">
-        <TransitionContainer>
+        <TransitionContainer onClick={() => setToggle(!toggle)}>
           <FadeIn isVisible={toggle}>
-            <Button onClick={() => setToggle(false)}>fade</Button>
+            <Button>fade</Button>
           </FadeIn>
         </TransitionContainer>
         <TransitionContainer />
