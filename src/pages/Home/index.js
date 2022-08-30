@@ -1,9 +1,11 @@
-import ReactSpringWrapper from '../../components/react-spring/index.js'
+import Basic from '../../components/basics/index.js'
+import Header from '../../components/header/index.js'
 
 export default function HomePage() {
   return (
     <div className="home">
-      <ReactSpringWrapper />
+      <Header library="react-spring" />
+      <Basic />
     </div>
   )
 }

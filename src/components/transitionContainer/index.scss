@@ -1,0 +1,9 @@
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg-secondary;
+  border-radius: $bdrs-l;
+  height: 152px;
+  width: 152px;
+}

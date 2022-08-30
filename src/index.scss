@@ -8,7 +8,11 @@
 // Load font
 @import url('https://fonts.googleapis.com/css?family=Roboto:#{$fw-light},#{$fw-regular},#{$fw-regular}i,#{$fw-semi-bold},#{$fw-bold},#{$fw-bold}i');
 
-$bgc-body: $c-white !default;
+$bg-secondary: #f7f7f8 !default;
+
+@import './components/transitionContainer/index.scss';
+@import './components/basics/index.scss';
+@import './components/button/index.scss';
 
 html {
   box-sizing: border-box;
@@ -26,19 +30,21 @@ body {
   justify-content: center;
   color: $c-text-base;
   font-family: $ff-sans-serif;
-  // font-feature-settings: 'ss02';
   font-size: $fz-body;
   line-height: $lh-m;
   margin: 0;
   padding: 0;
 }
 
-.home {
-  display: flex;
-  /* Auto layout */
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 48px;
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: $p-xl;
   position: relative;
-  background: #ffffff;
+  background: $bg-secondary;
+}
+
+.navigator {
+  display: flex;
+  gap: $m-l;
 }

@@ -1,0 +1,23 @@
+.button {
+  /* Button */
+  color: $c-white;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 10px;
+
+  width: 54px;
+  height: 33px;
+  left: calc(50% - 54px / 2);
+  top: 59.5px;
+
+  /* gray d3 */
+
+  background: #24222a;
+  border-radius: 4px;
+}
