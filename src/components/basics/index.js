@@ -1,12 +1,4 @@
-import {useState} from 'react'
-
-import Button from '../button/index.js'
-import TransitionContainer from '../transitionContainer/index.js'
-import FadeIn from '../transitions/fadeIn.js'
-
-const Basic = () => {
-  const [toggle, setToggle] = useState(true)
-
+const Basic = ({children}) => {
   return (
     <section>
       <h3>Transitions Presets: The basics</h3>
@@ -14,19 +6,7 @@ const Basic = () => {
         Contemplamos las transiciones más comunes para SUi, podemos ampliar el
         catálogo a futuro si fuera necesario.
       </p>
-      <div className="basicTransitionsContainer">
-        <TransitionContainer onClick={() => setToggle(!toggle)}>
-          <FadeIn isVisible={toggle}>
-            <Button>fade</Button>
-          </FadeIn>
-        </TransitionContainer>
-        <TransitionContainer />
-        <TransitionContainer />
-        <TransitionContainer />
-        <TransitionContainer />
-        <TransitionContainer />
-        <TransitionContainer />
-      </div>
+      <div className="basicTransitionsContainer">{children}</div>
     </section>
   )
 }
