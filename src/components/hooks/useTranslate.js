@@ -2,8 +2,8 @@ import {animated, useSpring} from '@react-spring/web'
 
 const useTranslate = ({toggle, x = 0, y = 0}) => {
   const springStyles = useSpring({
-    x: toggle ? 0 : x,
-    y: toggle ? 0 : y
+    x: toggle ? x : 0,
+    y: toggle ? y : 0
   })
 
   return Object.assign([springStyles, animated], {
