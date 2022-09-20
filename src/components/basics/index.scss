@@ -1,8 +1,0 @@
-.basicTransitionsContainer {
-  display: grid;
-  padding: $p-giant $p-giant;
-  row-gap: $m-xl;
-  background: $c-white;
-  border-radius: $bdrs-l;
-  grid-template-columns: repeat(5, 1fr);
-}

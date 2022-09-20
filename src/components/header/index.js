@@ -1,10 +1,7 @@
-const Header = ({library}) => {
+const Header = () => {
   return (
     <>
-      <nav className="navigator">
-        <a href="/">React-spring</a> |<a href="/framer">Framer Motion</a>
-      </nav>
-      <h1>Transitions (with {library})</h1>
+      <h1>Transitions</h1>
       <p>
         Nuestros componentes/pantallas pueden tener asociadas unas transiciones,
         generando de esta manera interacciones/microinteracciones. Puedes

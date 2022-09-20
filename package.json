@@ -22,11 +22,12 @@
     "@s-ui/component-peer-dependencies": "1",
     "@s-ui/hoc": "1",
     "@s-ui/i18n": "1",
+    "@s-ui/react-head": "1",
     "@s-ui/react-initial-props": "2",
+    "@s-ui/react-primitive-injector": "1",
     "@s-ui/react-router": "1",
     "react": "17",
-    "react-dom": "17",
-    "@s-ui/react-head": "1"
+    "react-dom": "17"
   },
   "eslintConfig": {
     "extends": [
